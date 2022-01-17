@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Exo:wght@900&family=Noto+Sans+Mono&display=swap");
+
+/* LAYOUT
+---------------------------------- */
+* {box-sizing: border-box;}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	font-size: 15px;
+}
+
+body {
+	background: radial-gradient(rgba(118, 0, 191, 0.5) 0%, transparent 70%), linear-gradient(#0b161e 40%, #202076 70%);
+  	perspective: 700px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Noto Sans', sans-serif;
+	min-height: 100vh;
+}
+
+.lines {
+	position: fixed;
+	width: 100vw;
+	height: 4em;
+	background: linear-gradient(rgba(89, 193, 254, 0.2) 20%, #59c1fe 40%, #59c1fe 60%, rgba(89, 193, 254, 0.2) 80%);
+	background-size: 1px 0.5em;
+	box-shadow: 0 0 1em rgba(89, 193, 254, 0.4);
+	transform: translateY(-1em);
+	left: 0;
+	z-index:-2;
+}
+
+.grid {
+	background: linear-gradient(transparent 65%, rgba(46, 38, 255, 0.4) 75%, #7d41e6 80%, rgba(46, 38, 255, 0.4) 85%, transparent 95%), linear-gradient(90deg, transparent 65%, rgba(46, 38, 255, 0.4) 75%, #7d41e6 80%, rgba(46, 38, 255, 0.4) 85%, transparent 95%);
+	background-size: 30px 30px;
+	width: 200vw;
+	height: 300vh;
+	position: absolute;
+	bottom: -120vh;
+	transform: rotateX(-100deg);
+	-webkit-mask-image: linear-gradient(black, rgba(0, 0, 0, 0) 80%);
+	z-index: -3;
+  }
+
+/* HEADINGS
+---------------------------------- */
+h1 {
+	position: relative;
+	text-transform:uppercase;
+	font-family: "Exo";
+	font-size: 7.5em;
+	letter-spacing: 0.03em;
+	margin: 0;
+	transform: skew(-15deg);
+	z-index:2;
+}
+	h1::after {
+		content: "";
+		position: absolute;
+		top: -0.1em;
+		right: 0.05em;
+		width: 0.4em;
+		height: 0.4em;
+		background: radial-gradient(#fff 3%, rgba(255, 255, 255, 0.3) 15%, rgba(255, 255, 255, 0.05) 60%, transparent 80%), radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/5% 100%, radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/70% 5%;
+		background-repeat: no-repeat;
+	}
+	h1 span:first-child {
+		display: block;
+		text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black, 0 0 5em #165ff3;
+		-webkit-text-stroke: 0.06em rgba(0, 0, 0, 0.5);
+	}
+	h1 span:last-child {
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: linear-gradient(#032d50 25%, #00a1ef 35%, #fff 50%, #20125f 50%, #8313e7 55%, #ff61af 75%);
+		-webkit-text-stroke: 0.01em #94a0b9;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+h2 {
+	font-family: "Mr Dafoe";
+	margin: 0 auto 15px;
+	font-size: 3.5em;
+	margin-top: -0.9em;
+	color: #fff;
+	text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+	transform: rotate(-7deg);
+	font-weight:300;
+	z-index:3;
+  }
+
+h3 {
+	font-family: "Mr Dafoe";
+	margin: 0;
+	font-size: 3em;
+	color: #fff;
+	text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+	transform: rotate(-7deg);
+	font-weight:300;
+	z-index:3;
+	margin-bottom: 1em;
+}
+
+h4 {
+	font-family: "Exo";
+	text-transform:uppercase;
+	margin: 0;
+	font-size: 5em;
+	color: #fff;
+	text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+	font-weight:300;
+	z-index:3;
+	margin-bottom: 1em;
+}
+
+/* CANVAS
+---------------------------------- */
+canvas {
+	background: #111;
+	display:block;
+	border-radius: 5px;
+	z-index:1;
+}
+
+canvas:hover {
+	cursor: none;
+}
+
+/* BUTTONS
+---------------------------------- */
+.btn {
+	cursor: pointer;
+	border: 0;
+	padding: 10px 20px;
+	background:#20125f;
+	color:#fff;
+	border-radius: 5px;
+}
+.btn:focus {
+	outline: 0;
+}
+.btn:hover {
+	background:#8313e7;
+}
+.btn:active {
+	transform: scale(0.98);
+}
+.rules-btn {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.credits-btn {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+.wonGame .btn {
+	background-color: rgba(131,19,231,.6);
+}
+.wonGame .btn:hover {
+	background-color: #fe05e1;
+}
+.btn.big-btn {
+	font-size:1.5em;
+	font-family: "Exo";
+	text-transform:uppercase;
+	border-radius: 0;
+	position: relative;
+}
+.btn.big-btn:focus {
+	cursor: none;
+}
+
+/* INFO
+---------------------------------- */
+.rules {
+	position: absolute;
+	top:0;
+	left:-400px;
+	background: #111;
+	color: #fff;
+	min-height: 100vh;
+	width: 400px;
+	padding: 20px;
+	font-size: 1em;
+	line-height: 1.8;
+	transition: transform 1s ease-in-out;
+}
+.rules.show {
+	transform: translateX(400px);
+	z-index:2;
+}
+.credits {
+	position: absolute;
+	top:0;
+	right:-400px;
+	background: #111;
+	color: #fff;
+	min-height: 100vh;
+	width: 400px;
+	padding: 20px;
+	font-size: 1em;
+	line-height: 1.8;
+	transition: transform 1s ease-in-out;
+}
+.credits.show {
+	transform: translateX(-400px);
+	z-index:2;
+}
+.credits a:link,
+.credits a:visited {
+	color:#fe05e1;
+	text-decoration: none;
+}
+
+.credits a:active  {
+	color:#8313e7;
+}
+
+.credits a:hover  {
+	color:#fe05e1;
+	text-decoration: underline;
+}
+
+/* ENDGAME OVERLAY
+---------------------------------- */
+.overlay {
+	position: absolute;
+	top:0;
+	bottom:0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0;
+	color: #CCC;
+	opacity: 0;
+	z-index: -10;	
+	transition: 0.3s ease;
+}
+.lostGame {	background-color: #111; }
+.wonGame { background-color: #20125f; }
+.overlay p {
+	font-size:1.5em;
+	font-family: "Exo";	
+	font-weight: 300;
+	margin: 1em auto;
+}
+.overlay.show {
+	opacity: 1;
+	z-index: 10;
+}

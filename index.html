@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Breakout!</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="grid"></div>
+	<div class="lines"></div>
+	<h1>
+		<span>breakout</span>
+		<span>breakout</span>
+	</h1>
+	<h2>version 1.0</h2>
+	<button id="rules-btn" class="btn rules-btn">Show Rules</button>
+	<button id="credits-btn" class="btn credits-btn">About &amp; Credits</button>
+	<div id="rules" class="rules">
+		<h3>How To Play</h3>
+		<p>Use your right and left keys to move the paddle to bounce the ball up and break the blocks.</p>
+		<p>Try to hit multiple bricks on a single shot (that is, before the ball bounces back on the paddle) for bonus score points!</p>
+		<p>If you run out of lives you can choose to play again, but your score and the blocks will reset.</p>
+		<button id="rules-close-btn" class="btn">Close</button>
+	</div>
+	<div id="credits" class="credits">
+		<h3>About &amp; Credits</h3>
+		<p>Base game done with the tutorial included in the <a href="https://www.udemy.com/course/web-projects-with-vanilla-javascript/">20+ Web Projects With Vanilla JavaScript</a> course. I played <b>Arkanoid</b> for <i>so many hours</i> when I was a kid, so nostalgia invaded me and I decided to add a few extras :) More to come as I learn new stuff, new tricks and good practices!</p>
+		<ul>
+			<li>Sound effects are from <a href="https://opengameart.org/content/512-sound-effects-8-bit-style" target="_blank">this free collection</a> available at <b>OpenGameArt.org</b></li>
+			<li>The CSS retro styles and effects I used on the title &amp; interface are from <a href="https://codepen.io/ykadosh/pen/zYNxVKr" target="_blank">this</a> pen on <b>Codepen</b></li>
+		</ul>
+		<p>I'm still learning so if you have any suggestions for future features or advice to improve my code, <span id="emailLink"></span>! :)</p>
+
+		<button id="credits-close-btn" class="btn">Close</button>
+	</div>
+	<div id="lostGame" class="overlay lostGame">
+		<h4>You lost :(</h4>
+		<p class="yourFinalScore"></p>
+		<button id="lostGame-btn" class="btn big-btn playAgain-btn">Play Again</button>
+	</div>
+	<div id="wonGame" class="overlay wonGame">
+		<h4>You won! :)</h4>
+		<p>Congratulations! Thank you for playing, check back soon for more features &amp; updates :D</p>
+		<p class="yourFinalScore"></p>
+		<button id="wonGame-btn" class="btn big-btn playAgain-btn">Play Again</button>
+	</div>
+	<canvas id="canvas" width="800" height="600"></canvas>
+	<script src="./js/script.js"></script>
+	<script src="./js/game.js"></script>
+</body>
+</html>
