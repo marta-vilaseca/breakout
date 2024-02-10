@@ -1,9 +1,15 @@
-# Breakout!
+# 🎮 Breakout!
 
-My own take of the Breakout game included as project #17 in the course **'20 Web Projects With Vanilla JavaScript'** by Brad Traversy on Udemy: https://www.udemy.com/course/web-projects-with-vanilla-javascript/
+My own take of the Breakout game included as project #17 in the course [**'20 Web Projects With Vanilla JavaScript'**](https://www.udemy.com/course/web-projects-with-vanilla-javascript/) by Brad Traversy on Udemy.
 
-## Extra features
+<p style="text-align: center; font-size:1.5rem"><b><a href="https://marta-vilaseca.github.io/breakout/">&raquo; Play it here! &laquo;</a></b></p>
+
+[![screenshot](./img/screenshot.jpg "Play here!")](https://marta-vilaseca.github.io/breakout/)
+
+## ⭐ Extra features
+
 Extra features included beyond the base tutorial include:
+
 - Ball doesn't start moving automatically when the screen loads, you need to press **Space** or **↑** to start
 - Added 'lives' AKA extra balls. Original game kept going when the ball hit the bottom wall, only resetting the bricks.
 - Added Winning and Losing screens that display a 'play again' button along with your final score.
@@ -12,19 +18,18 @@ Extra features included beyond the base tutorial include:
 - Ball speed will increase gradually the longer you keep bouncing it around, and it will reset back to normal every time you lose a life.
 - Added sound efects and improved interface (page layout, game brick colors...)
 
+## 📄 Future feature ideas
 
-![screenshot](https://user-images.githubusercontent.com/820682/149757338-3efc8048-173e-45ad-97dc-c6f123d5a251.jpg)
-
-
-## Future feature ideas
 - Hall of fame with high scores
 - Extra levels
 - Maybe other hidden cheats or difficulty settings
 - Different color palettes (either chosen by the user or randomly applied)
 
-## Credits
+## 💌 Credits
+
 - Sounds from this sound collection: https://opengameart.org/content/512-sound-effects-8-bit-style
 - CSS retro styles from this pen on Codepen: https://codepen.io/ykadosh/pen/zYNxVKr
 
 ### If you've read this far
+
 Thank you! I hope you have fun playing :)
